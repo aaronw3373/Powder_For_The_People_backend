@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
+##RESORT ROUTES
 
 #gets index of resorts
 get '/resorts' => 'resorts#index'
@@ -19,8 +20,27 @@ get '/resortsname' => 'resorts#find_by_name'
 post '/resorts' => 'resorts#create'
 #update atributes
 patch '/resorts/:id' => 'resorts#update'
-#delete resorts
-delete '/resortsname' => 'resorts#delete'
+#delete resorts by name
+delete '/resortsname' => 'resorts#destroyname'
+#delete desorts by id
+delete '/resorts/:id' => 'resorts#destroyid'
+
+##USER ROUTES
+
+#get index of users
+get '/users' => 'users#index'
+#get user by id
+get '/users/:id' => 'users#show'
+#get user by username
+get '/usersname' => 'users#find_by_name'
+#create new user
+post '/users' => 'users#create'
+#update atributes
+patch '/users/:id' => 'users#update'
+#delete users by username
+delete '/usersname' => 'users#destroyname'
+#delete users by id
+delete '/users/:id' => 'users#destroyid'
 
 
 

@@ -18,9 +18,20 @@ Resort.create(name:'Mount Snow', vertical: 1700, acres: 588, location:"pws:MMSWV
 Resort.create(name:'Sugarloaf', vertical: 2820, acres: 1056, location:"pws:KMECARRA3");
 Resort.create(name:"Jay Peak", vertical:2153, acres:385, location:"pws:KVTMONTG3");
 Resort.create(name:"Cannon",vertical:2180,acres:282, location:"pws:KNHFRANC6");
+Resort.create(name:"Smugglers Notch", vertical:2610, acres:1000, location:"pws:MMMNV1");
+Resort.create(name:"Sugarbush", vertical:2600, acres:578, location:"pws:KVTWARRE3");
+Resort.create(name:"Mad River Glen", vertical:2037, acres:120, location:"pws:KVTSTARK2");
 
 
 #Resort.create(name:"", vertical:, acres:, location:"pws:");
+
+
+
+
+User.destroy_all
+
+User.create(name:"Aaron",username:"aaronw3373",privileges:"god")
+
 
 #User.create(name:,username:,password:,privileges:)
 

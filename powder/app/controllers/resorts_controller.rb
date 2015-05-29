@@ -22,7 +22,7 @@ class ResortsController < ApplicationController
     end
   end
 
-  #Get /resorts/find by name
+  #Get /resorts/find  by name
   def find_by_name
     @resort = Resort.find_by name: params[:name]
     if @resort
@@ -54,16 +54,23 @@ class ResortsController < ApplicationController
     end
   end
 
-  #DESTROY
-  def delete
+  #DESTROY by name
+  def destroyname
     @resort = Resort.find_by name: params[:name]
-    @resort.delete
+    @resort.destroy
+    head :no_content
+  end
+
+  #DESTROY by id
+  def destroyid
+    @resort = Resort.find params[:id]
+    @resort.destroy
     head :no_content
   end
 
   private
   def resort_params
-   params.require(:resort).permit(:name, :vertical, :acres, :state, :location)
+   params.require(:resort).permit(:name, :vertical, :acres, :location)
   end
 
 end
