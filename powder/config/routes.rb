@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  #devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -7,6 +8,8 @@ Rails.application.routes.draw do
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
+
+
 
 ##RESORT ROUTES
 
@@ -32,7 +35,7 @@ get '/users' => 'users#index'
 #get user by id
 get '/users/:id' => 'users#show'
 #get user by username
-get '/usersname' => 'users#find_by_name'
+get '/usersname' => 'users#login'
 #create new user
 post '/users' => 'users#create'
 #update atributes
@@ -41,6 +44,14 @@ patch '/users/:id' => 'users#update'
 delete '/usersname' => 'users#destroyname'
 #delete users by id
 delete '/users/:id' => 'users#destroyid'
+
+
+##FAVORTIE ROUTES
+
+#create new favortie relationship
+post '/favorites' => 'favorites#create'
+
+get '/favorites/:id' => 'favorites#show'
 
 
 

@@ -14,9 +14,7 @@ class ResortsController < ApplicationController
   def show
   @resort = Resort.find params[:id]
     if @resort
-      w_api = Wunderground.new(ENV['WUNDERGROUND'])
-      @weather = w_api.forecast_and_conditions_for(@resort.location)
-      render json: {resort: @resort, weather: @weather}
+      render json: {resort: @resort}
     else
      render json: @resort.errors, status: :unprocessable_entity
     end

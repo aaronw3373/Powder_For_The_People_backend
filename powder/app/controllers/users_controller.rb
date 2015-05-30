@@ -21,12 +21,15 @@ class UsersController <ApplicationController
   end
 
   #Get /users/find  by username
-  def find_by_name
+  def login
     @user = User.find_by username: params[:username]
-    if @user
+    if @user && @user.authenticate(params[:username])
+      render json: @user
+    elsif @user
       render json: @user
     else
       render json: @user.errors, status: :unprocessable_entity
+       head :unauthorized
     end
   end
 
@@ -66,7 +69,7 @@ class UsersController <ApplicationController
 
   private
   def user_params
-   params.require(:user).permit(:name,:username, :privileges)
+   params.require(:user).permit(:name, :username, :password, :privileges, :token)
   end
 
 end
