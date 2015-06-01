@@ -48,10 +48,14 @@ delete '/users/:id' => 'users#destroyid'
 
 ##FAVORTIE ROUTES
 
+#get index of favorites
+get '/favorites' => 'favorites#index'
 #create new favortie relationship
 post '/favorites' => 'favorites#create'
-
+#get the favorites of a user
 get '/favorites/:id' => 'favorites#show'
+#delete a favorite from the user
+delete '/favorites/:idU/:idR' => 'favorites#destroy'
 
 
 
@@ -102,4 +106,5 @@ get '/favorites/:id' => 'favorites#show'
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
 end
