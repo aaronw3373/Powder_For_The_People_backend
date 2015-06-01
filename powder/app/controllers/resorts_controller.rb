@@ -24,9 +24,17 @@ class ResortsController < ApplicationController
   def find_by_name
     @resort = Resort.find_by name: params[:name]
     if @resort
-      w_api = Wunderground.new(ENV['WUNDERGROUND'])
-      @weather = w_api.forecast_and_conditions_for(@resort.location)
-      render json: {resort: @resort, weather: @weather}
+      if w_api = Wunderground.new(ENV['WUNDERGROUND'])
+        @weather = w_api.forecast_and_conditions_for(@resort.location)
+
+        if @resort['latitude'].nil? || @resort['longitude'].nil?
+          @resort.update(latitude: @weather['current_observation']['display_location']['latitude'], longitude: @weather['current_observation']['display_location']['longitude'])
+        end
+        @resort = Resort.find_by name: params[:name]
+        render json: {resort: @resort, weather: @weather}
+      else
+        render json: {resort: @resort}
+      end
     else
       render json: @resort.errors, status: :unprocessable_entity
     end
@@ -68,7 +76,7 @@ class ResortsController < ApplicationController
 
   private
   def resort_params
-   params.require(:resort).permit(:name, :vertical, :acres, :location)
+   params.require(:resort).permit(:name, :vertical, :acres, :location, :longitude, :latitude)
   end
 
 end

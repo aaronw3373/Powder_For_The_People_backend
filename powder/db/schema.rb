@@ -28,6 +28,8 @@ ActiveRecord::Schema.define(version: 20150529190448) do
     t.integer  "vertical",   null: false
     t.integer  "acres",      null: false
     t.string   "location",   null: false
+    t.string   "latitude"
+    t.string   "longitude"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -5,6 +5,8 @@ class CreateResorts < ActiveRecord::Migration
       t.integer :vertical, null: false
       t.integer :acres, null:false
       t.string :location, null:false
+      t.string :latitude
+      t.string :longitude
 
       t.timestamps null: false
     end
