@@ -1,4 +1,4 @@
-class UsersController <ApplicationController
+class UsersController < ApiController
 
   #GET /users
   def index
@@ -11,7 +11,7 @@ class UsersController <ApplicationController
   end
 
   #GET /users/:id
-  def show
+  def show_id
   @user = User.find params[:id]
     if @user
       render json: @user
@@ -20,16 +20,22 @@ class UsersController <ApplicationController
     end
   end
 
-  #Get /users/find  by username
-  def login
-    @user = User.find_by username: params[:username]
-    if @user && @user.authenticate(params[:username])
-      render json: @user
-    elsif @user
+  def show_email
+  @user = User.find_by email: params[:email]
+    if @user
       render json: @user
     else
-      render json: @user.errors, status: :unprocessable_entity
-       head :unauthorized
+     render json: @user.errors, status: :unprocessable_entity
+    end
+  end
+
+  def login
+    credentials = login_params
+    @user = User.find_by email: credentials[:email]
+    if @user && @user.authenticate(credentials[:password])
+      render json: { user:@user, token: @user.token }
+    else
+      head :bad_request
     end
   end
 
@@ -55,7 +61,7 @@ class UsersController <ApplicationController
 
   #DESTROY by name
   def destroyname
-    @user = User.find_by username: params[:username]
+    @user = User.find_by email: params[:email]
     @user.destroy
     head :no_content
   end
@@ -69,7 +75,11 @@ class UsersController <ApplicationController
 
   private
   def user_params
-   params.require(:user).permit(:name, :username, :password, :privileges, :token)
+     params.require(:user).permit(:name, :email, :password, :privileges, :token)
+  end
+
+  def login_params
+    params.require(:credentials).permit(:email, :password)
   end
 
 end

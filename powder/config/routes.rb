@@ -33,15 +33,17 @@ delete '/resorts/:id' => 'resorts#destroyid'
 #get index of users
 get '/users' => 'users#index'
 #get user by id
-get '/users/:id' => 'users#show'
+get '/users/:id' => 'users#show_id'
+#get user by email
+get '/useremail' => 'users#show_email'
 #get user by username
-get '/usersname' => 'users#login'
+post '/userslogin' => 'users#login'
 #create new user
 post '/users' => 'users#create'
 #update atributes
 patch '/users/:id' => 'users#update'
 #delete users by username
-delete '/usersname' => 'users#destroyname'
+delete '/useremail' => 'users#destroyname'
 #delete users by id
 delete '/users/:id' => 'users#destroyid'
 

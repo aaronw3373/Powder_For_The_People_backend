@@ -19,12 +19,12 @@ class FavoritesController <ApplicationController
   end
 
   def create
-    @favorite = Favorite.new(favorite_params)
-    if @favorite.save
-      render json: @favorite, status: :created
-    else
-      render json: @favorite.errors, status: :unprocessable_entity
-    end
+      @favorite = Favorite.new(favorite_params)
+      if @favorite.save
+        render json: @favorite, status: :created
+      else
+        render json: @favorite.errors, status: :unprocessable_entity
+      end
   end
 
   def destroy
