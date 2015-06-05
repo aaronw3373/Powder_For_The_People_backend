@@ -21,6 +21,8 @@ gem 'bcrypt', :require =>'bcrypt'
 
 gem 'json'
 
+gem 'devise'
+
 gem 'fuzzy_match'
 
 gem 'rack-cors', :require => 'rack/cors'
