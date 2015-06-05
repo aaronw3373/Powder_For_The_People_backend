@@ -12,12 +12,12 @@ class UsersController < OpenReadController
 
   #GET /users/:id
   def show_id
-  @user = User.find params[:id]
-    if @user
-      render json: @user
-    else
-     render json: @user.errors, status: :unprocessable_entity
-    end
+    @user = User.find params[:id]
+      if @user
+        render json: @user
+      else
+       render json: @user.errors, status: :unprocessable_entity
+      end
   end
 
   def show_email

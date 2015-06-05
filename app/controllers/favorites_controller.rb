@@ -19,12 +19,16 @@ class FavoritesController <OpenReadController
   end
 
   def create
+    @favs = Favorite.where(user: favorite_params['user']).where(resort: favorite_params['resort'])
+    if @favs.exists?
+    else
       @favorite = Favorite.new(favorite_params)
       if @favorite.save
         render json: @favorite, status: :created
       else
         render json: @favorite.errors, status: :unprocessable_entity
       end
+    end
   end
 
   def destroy
@@ -35,6 +39,6 @@ class FavoritesController <OpenReadController
 
   private
   def favorite_params
-   params.require(:favorite).permit(:user, :resort)
+   params.require(:favorite).permit(:user, :resort, :name)
   end
 end
