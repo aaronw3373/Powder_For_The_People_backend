@@ -19,8 +19,6 @@ gem 'wunderground'
 
 gem 'bcrypt', :require =>'bcrypt'
 
-gem 'devise'
-
 gem 'json'
 
 gem 'fuzzy_match'

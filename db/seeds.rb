@@ -75,10 +75,48 @@
 # Resort.create(name:"Ski Ward", vertical:220, acres:45, location:"pws:KMASHREW17");
 
 
+# puts "CREATED FIRST SET 61 RESORTS"
+
+Resort.create(name:"Wisp", vertical:700, acres:132, location:"pws:");
+Resort.create(name:"Mountain Creek", vertical:1040, acres:167, location:"pws:");
+Resort.create(name:"Belleayre", vertical:428, acres:173, location:"pws:");
+Resort.create(name:"Bristol Mountain", vertical:1200, acres:160, location:"pws:");
+Resort.create(name:"Catamount", vertical:, acres:, location:"pws:");
+Resort.create(name:"Gore Mountain", vertical:2537, acres:446, location:"pws:");
+Resort.create(name:"Greek Peak", vertical:, acres:, location:"pws:");
+Resort.create(name:"Holiday Valley", vertical:, acres:, location:"pws:");
+Resort.create(name:"Hunter Mountain", vertical:, acres:, location:"pws:");
+Resort.create(name:"Kissing Bridge", vertical:, acres:, location:"pws:");
+Resort.create(name:"Holimont", vertical:, acres:, location:"pws:");
+Resort.create(name:"Holiday Mountain", vertical:, acres:, location:"pws:");
+Resort.create(name:"Dry Hill", vertical:, acres:, location:"pws:");
+Resort.create(name:"Buffalo Ski Club", vertical:, acres:, location:"pws:");
+Resort.create(name:"Big Tupper", vertical:, acres:, location:"pws:");
+Resort.create(name:"Brantling", vertical:, acres:, location:"pws:");
+Resort.create(name:"Beartown", vertical:, acres:, location:"pws:");
+Resort.create(name:"Labrador Mountain", vertical:, acres:, location:"pws:");
+Resort.create(name:"", vertical:, acres:, location:"pws:");
+Resort.create(name:"", vertical:, acres:, location:"pws:");
+Resort.create(name:"", vertical:, acres:, location:"pws:");
+Resort.create(name:"", vertical:, acres:, location:"pws:");
+Resort.create(name:"", vertical:, acres:, location:"pws:");
+Resort.create(name:"", vertical:, acres:, location:"pws:");
+Resort.create(name:"", vertical:, acres:, location:"pws:");
+Resort.create(name:"", vertical:, acres:, location:"pws:");
+Resort.create(name:"", vertical:, acres:, location:"pws:");
+Resort.create(name:"", vertical:, acres:, location:"pws:");
+Resort.create(name:"", vertical:, acres:, location:"pws:");
+Resort.create(name:"", vertical:, acres:, location:"pws:");
+Resort.create(name:"", vertical:, acres:, location:"pws:");
+Resort.create(name:"", vertical:, acres:, location:"pws:");
+Resort.create(name:"", vertical:, acres:, location:"pws:");
+Resort.create(name:"", vertical:, acres:, location:"pws:");
 
 
-# puts "CREATED 62 RESORTS"
-# #Resort.create(name:"", vertical:, acres:, location:"pws:");
+# puts "CREATED SECOND SET  RESORTS"
+
+
+# Resort.create(name:"", vertical:, acres:, location:"pws:");
 
 
 
