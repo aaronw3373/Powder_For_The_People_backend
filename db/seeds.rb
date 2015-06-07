@@ -7,6 +7,9 @@
 # #
 # #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 # #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+
 # Favorite.destroy_all
 # Resort.destroy_all
 # User.destroy_all
@@ -78,45 +81,45 @@ Resort.create(name:"Ski Ward", vertical:220, acres:45, location:"pws:KMASHREW17"
 puts "CREATED FIRST SET 61 RESORTS"
 
 
-# #Maryland and new jersey
-# Resort.create(name:"Wisp", vertical:700, acres:132, location:"pws:");
-# Resort.create(name:"Mountain Creek", vertical:1040, acres:167, location:"pws:");
-# #
-# #New York
-# #
-# Resort.create(name:"Belleayre", vertical:428, acres:173, location:"pws:");
-# Resort.create(name:"Bristol Mountain", vertical:1200, acres:160, location:"pws:");
-# Resort.create(name:"Gore Mountain", vertical:2537, acres:446, location:"pws:");
-# Resort.create(name:"Greek Peak", vertical:952, acres:220, location:"pws:");
-# Resort.create(name:"Holiday Valley", vertical:, acres:, location:"pws:");
-# Resort.create(name:"Hunter Mountain", vertical:, acres:, location:"pws:");
-# Resort.create(name:"Kissing Bridge", vertical:, acres:, location:"pws:");
-# Resort.create(name:"Holimont", vertical:, acres:, location:"pws:");
-# Resort.create(name:"Holiday Mountain", vertical:, acres:, location:"pws:");
-# Resort.create(name:"Dry Hill", vertical:, acres:, location:"pws:");
-# Resort.create(name:"Buffalo Ski Club", vertical:, acres:, location:"pws:");
-# Resort.create(name:"Big Tupper", vertical:, acres:, location:"pws:");
-# Resort.create(name:"Brantling", vertical:, acres:, location:"pws:");
-# Resort.create(name:"Beartown", vertical:, acres:, location:"pws:");
-# Resort.create(name:"Labrador Mountain", vertical:, acres:, location:"pws:");
-# Resort.create(name:"Mount Peter", vertical:, acres:, location:"pws:");
-# Resort.create(name:"McCauley Mountain", vertical:, acres:, location:"pws:");
-# Resort.create(name:"Peek'n Peak", vertical:, acres:, location:"pws:");
-# Resort.create(name:"Plattekill Mountain", vertical:, acres:, location:"pws:");
-# Resort.create(name:"Royal Mountain", vertical:, acres:, location:"pws:");
-# Resort.create(name:"Song Mountain", vertical:, acres:, location:"pws:");
-# Resort.create(name:"Snow Ridge", vertical:, acres:, location:"pws:");
-# Resort.create(name:"Swain", vertical:, acres:, location:"pws:");
-# Resort.create(name:"Thunder Ridge", vertical:, acres:, location:"pws:");
-# Resort.create(name:"Titus Mountain", vertical:, acres:, location:"pws:");
-# Resort.create(name:"Toggenburg Mountain", vertical:, acres:, location:"pws:");
-# Resort.create(name:"Tuxedo Ridge", vertical:, acres:, location:"pws:");
-# Resort.create(name:"West Mountain", vertical:, acres:, location:"pws:");
-# Resort.create(name:"Willard Mountain", vertical:, acres:, location:"pws:");
-# Resort.create(name:"Whiteface Mountain", vertical:, acres:, location:"pws:");
-# Resort.create(name:"Windham Mountain", vertical:, acres:, location:"pws:");
-# Resort.create(name:"Woods Valley", vertical:, acres:, location:"pws:");
+#Maryland and new jersey
+Resort.create(name:"Wisp", vertical:700, acres:132, location:"pws:KMDMCHEN1");
+Resort.create(name:"Mountain Creek", vertical:1040, acres:167, location:"pws:KNJHAMBU2");
+#
+#New York
+#
+Resort.create(name:"Belleayre", vertical:428, acres:173, location:"pws:KNYSHAND2");
+Resort.create(name:"Bristol Mountain", vertical:1200, acres:160, location:"pws:KNYNAPLE6");
+Resort.create(name:"Gore Mountain", vertical:2537, acres:446, location:"pws:KNYNORTH11");
+Resort.create(name:"Greek Peak", vertical:952, acres:220, location:"pws:KNYDRYDE8");
+Resort.create(name:"Holiday Valley", vertical:750, acres:290, location:"pws:KNYFRANK8");
+Resort.create(name:"Hunter Mountain", vertical:1475, acres:240, location:"pws:KNYHUNTE3");
+Resort.create(name:"Kissing Bridge", vertical:550, acres:778, location:"pws:KNYGLENW2");
+Resort.create(name:"Holimont", vertical:700, acres:140, location:"pws:KNYFRANK8");
+Resort.create(name:"Holiday Mountain", vertical:400, acres:60, location:"pws:KNYNEWYO196");
+Resort.create(name:"Peek'n Peak", vertical:400, acres:105, location:"pws:KNYCLYME4");
+# Resort.create(name:"Dry Hill", vertical:300, acres:42, location:"pws:");
+# Resort.create(name:"Buffalo Ski Club", vertical:500, acres:225, location:"pws:");
+# Resort.create(name:"Big Tupper", vertical:1152, acres:125, location:"pws:");
+# Resort.create(name:"Brantling", vertical:250, acres:369, location:"pws:");
+# Resort.create(name:"Labrador Mountain", vertical:700, acres:250, location:"pws:");
+# Resort.create(name:"Mount Peter", vertical:450, acres:60, location:"pws:");
+# Resort.create(name:"McCauley Mountain", vertical:633, acres:250, location:"pws:");
+# Resort.create(name:"Plattekill Mountain", vertical:100, acres:75, location:"pws:");
+# Resort.create(name:"Royal Mountain", vertical:550, acres:30, location:"pws:");
+# Resort.create(name:"Song Mountain", vertical:700, acres:100, location:"pws:");
+# Resort.create(name:"Snow Ridge", vertical:500, acres:130, location:"pws:");
+# Resort.create(name:"Swain", vertical:650, acres:100, location:"pws:");
+# Resort.create(name:"Thunder Ridge", vertical:600, acres:100, location:"pws:");
+# Resort.create(name:"Titus Mountain", vertical:1200, acres:80, location:"pws:");
+# Resort.create(name:"Toggenburg Mountain", vertical:520, acres:83, location:"pws:");
+# Resort.create(name:"Tuxedo Ridge", vertical:400, acres:100, location:"pws:");
+# Resort.create(name:"West Mountain", vertical:1010, acres:124, location:"pws:");
+# Resort.create(name:"Willard Mountain", vertical:,505 acres:85, location:"pws:");
+# Resort.create(name:"Whiteface Mountain", vertical:3430, acres:283, location:"pws:");
+# Resort.create(name:"Windham Mountain", vertical:1600, acres:278, location:"pws:");
+# Resort.create(name:"Woods Valley", vertical:500, acres:25, location:"pws:");
 
+puts "cCREATED THIRD SET 33 RESORTS"
 # #
 # #Pennsylvania
 # #
@@ -142,7 +145,7 @@ puts "CREATED FIRST SET 61 RESORTS"
 # Resort.create(name:"Tussey Mountain", vertical:, acres:, location:"pws:");
 # Resort.create(name:"Whitetail", vertical:, acres:, location:"pws:");
 
-# puts "CREATED SECOND SET  RESORTS"
+# puts "CREATED THIRD SET 20 RESORTS"
 
 
 # Resort.create(name:"", vertical:, acres:, location:"pws:");
@@ -151,11 +154,11 @@ puts "CREATED FIRST SET 61 RESORTS"
 
 
 
-User.create!(name:"Aaron",email:"aaronw3373@gmail.com", privileges:"god", password: 'password1')
+ User.create!(name:"Aaron",email:"aaronw3373@gmail.com", privileges:"god", password: 'password1')
 
 
-# puts "CREATED 1 USER"
-# # User.create(name:,username:,password:,privileges:)
+# # puts "CREATED 1 USER"
+# # # User.create(name:,username:,password:,privileges:)
 
 
 

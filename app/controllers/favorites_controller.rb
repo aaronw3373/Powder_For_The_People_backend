@@ -32,7 +32,7 @@ class FavoritesController <OpenReadController
   end
 
   def destroy
-    @favorite = Favorite.find_by(user:(params[:idU]),resort:(params[:idR]))
+    @favorite = Favorite.find_by(user: params[:idU], resort:params[:idR])
     @favorite.destroy
     head :no_content
   end

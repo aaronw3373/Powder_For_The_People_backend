@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   has_many :resorts, through: :favorites
-  has_many :favorites, dependent: :destroy
+  has_many :favorites, :dependent => :destroy
   validates :email, uniqueness: true
 
 

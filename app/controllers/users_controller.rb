@@ -30,7 +30,7 @@ class UsersController < OpenReadController
   end
 
   #PATCH /movies/:id
-  def update
+  def update # FIXME chack that @current_use has god priv
     @user = User.find params[:id]
     if @user.update(user_params)
       head :no_content
@@ -40,14 +40,17 @@ class UsersController < OpenReadController
   end
 
   #DESTROY by name
-  def destroyname
+  def destroyname # FIXME chack that @current_user has god priv
     @user = User.find_by email: params[:email]
     @user.destroy
     head :no_content
   end
 
-  #DESTROY by id
-  def destroyid
+  #DESTROY by id # FIXME chack that @current_use has god or admin priv
+  def destroyid #FIXME user cannot be destroyed conflicting with favorites annd dependent destroy
+    @favorites =  Favorite.where user: params[:id]
+    @favorites.destroy_all
+
     @user = User.find params[:id]
     @user.destroy
     head :no_content
