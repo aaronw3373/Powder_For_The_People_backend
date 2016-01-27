@@ -153,8 +153,6 @@ Resort.create(name:"Whitetail", vertical:, acres:, location:"pws:");
 
 
 
- # User.create!(name:"Aaron",email:"aaronw3373@gmail.com", privileges:"god", password: 'password1')
-
 
 # # puts "CREATED 1 USER"
 # # # User.create(name:,username:,password:,privileges:)
